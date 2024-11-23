@@ -77,3 +77,7 @@ https://github.com/user-attachments/assets/5316f997-9769-4e2c-8749-6468e781b3ad
 </center>
 </div>
 
+## Download APK
+
+[Click Here](https://github.com/GJaswin/ChatConnect/releases/download/v0.2.0/app-release.apk)
+
