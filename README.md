@@ -1,5 +1,11 @@
 # Naan Mudhalvan Project - ChatConnect ![Static Badge](https://img.shields.io/badge/Kotlin-Android-brightgreen?logo=android) ![Static Badge](https://img.shields.io/badge/Personal_Project-demo-red)  ![GitHub repo size](https://img.shields.io/github/repo-size/gjaswin/LMSApp) 
 
+## Team Members
+Jaswin Kumar N R  
+Mohammed Thalha M  
+Navamohan M  
+Prince Kumar Mahto  
+Esaky S  
 
 ## Get started
 
