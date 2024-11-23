@@ -19,6 +19,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.gjk.chatconnect.Constants
+import com.gjk.chatconnect.view.Appbar
 import com.gjk.chatconnect.view.SingleMessage
 
 /**
@@ -30,8 +31,11 @@ import com.gjk.chatconnect.view.SingleMessage
 
 @Composable
 fun HomeView(
-    homeViewModel: HomeViewModel = viewModel()
+    homeViewModel: HomeViewModel = viewModel(),
+    back: () -> Unit
 ) {
+
+
     val message: String by homeViewModel.message.observeAsState(initial = "")
     val messages: List<Map<String, Any>> by homeViewModel.messages.observeAsState(
         initial = emptyList<Map<String, Any>>().toMutableList()
@@ -40,8 +44,12 @@ fun HomeView(
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom
+        verticalArrangement = Arrangement.Bottom,
     ) {
+        Appbar(
+            title = "ChatConnect",
+            action = { homeViewModel.logOut() }
+        )
         LazyColumn(
             modifier = Modifier
                 .fillMaxWidth()
@@ -55,7 +63,8 @@ fun HomeView(
 
                 SingleMessage(
                     message = message[Constants.MESSAGE].toString(),
-                    isCurrentUser = isCurrentUser
+                    isCurrentUser = isCurrentUser,
+
                 )
             }
         }
@@ -71,7 +80,7 @@ fun HomeView(
             },
             maxLines = 1,
             modifier = Modifier
-                .padding(horizontal = 15.dp, vertical = 1.dp)
+                .padding(horizontal = 15.dp, vertical = 8.dp)
                 .fillMaxWidth()
                 .weight(weight = 0.09f, fill = true),
             keyboardOptions = KeyboardOptions(
@@ -86,7 +95,8 @@ fun HomeView(
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.Send,
-                        contentDescription = "Send Button"
+                        contentDescription = "Send Button",
+                        tint = Color(0xFF1234FF)
                     )
                 }
             }

@@ -1,13 +1,20 @@
 package com.gjk.chatconnect.view.home
 
+import android.app.Activity
 import android.util.Log
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.NavHostController
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.gjk.chatconnect.Constants
+import com.gjk.chatconnect.NavComposeApp
+import com.google.firebase.auth.FirebaseAuth
 import java.lang.IllegalArgumentException
 
 /**
@@ -17,7 +24,7 @@ class HomeViewModel : ViewModel() {
     init {
         getMessages()
     }
-
+    private val auth: FirebaseAuth = Firebase.auth
     private val _message = MutableLiveData("")
     val message: LiveData<String> = _message
 
@@ -82,5 +89,9 @@ class HomeViewModel : ViewModel() {
      */
     private fun updateMessages(list: MutableList<Map<String, Any>>) {
         _messages.value = list.asReversed()
+    }
+
+    fun logOut() {
+        auth.signOut()
     }
 }

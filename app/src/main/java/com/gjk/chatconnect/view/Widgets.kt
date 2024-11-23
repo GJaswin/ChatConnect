@@ -3,6 +3,7 @@ package com.gjk.chatconnect.view
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
@@ -16,6 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gjk.chatconnect.Constants
@@ -44,11 +47,15 @@ fun Buttons(title: String, onClick: () -> Unit, backgroundColor: Color) {
             containerColor = backgroundColor,
             contentColor = Color.White
         ),
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(0),
+        modifier = Modifier
+            .width(300.dp)
+            .padding(8.dp),
+        shape = RoundedCornerShape(20),
     ) {
         Text(
-            text = title
+            text = title,
+            fontWeight = FontWeight.Bold,
+            fontSize = 22.sp
         )
     }
 }
@@ -104,11 +111,15 @@ fun TextFormField(
 
 @Composable
 fun SingleMessage(message: String, isCurrentUser: Boolean) {
-    Card(
-        shape = RoundedCornerShape(16.dp),
+    ElevatedCard(
+        elevation = CardDefaults.cardElevation(
+            defaultElevation = 12.dp
+        ),
+        shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
             containerColor = if (isCurrentUser) MaterialTheme.colorScheme.primary else Color.White
-        )
+        ),
+        modifier = Modifier.padding(6.dp)
     ) {
         Text(
             text = message,
