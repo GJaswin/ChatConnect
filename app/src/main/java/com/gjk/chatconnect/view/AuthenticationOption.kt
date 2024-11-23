@@ -30,8 +30,12 @@ fun AuthenticationView(register: () -> Unit, login: () -> Unit) {
                 verticalArrangement = Arrangement.Bottom
             ) {
                 Title(title = "⚡️ Chat Connect")
-                Buttons(title = "Register", onClick = register, backgroundColor = Color.Blue)
-                Buttons(title = "Login", onClick = login, backgroundColor = Color.Magenta)
+                Buttons(
+                    title = "Register",
+                    onClick = register,
+                    backgroundColor = Color(0xFF5534EB),
+                )
+                Buttons(title = "Login", onClick = login, backgroundColor = Color(0xFF1e0b57))
             }
         }
     }

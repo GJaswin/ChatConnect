@@ -53,7 +53,9 @@ fun NavComposeApp() {
                 )
             }
             composable(Home) {
-                HomeView()
+                HomeView(
+                    back = actions.navigateBack
+                )
             }
         }
     }

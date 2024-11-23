@@ -66,7 +66,7 @@ fun RegisterView(
             Buttons(
                 title = "Register",
                 onClick = { registerViewModel.registerUser(home = home) },
-                backgroundColor = Color.Blue
+                backgroundColor = Color(0xFF5534EB)
             )
         }
     }
