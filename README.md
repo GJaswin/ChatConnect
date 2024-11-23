@@ -63,9 +63,7 @@ Just install the .apk file and open it.
 <img src="./screenshots/3.jpg" width = 25%> 
 <img src="./screenshots/4.jpg" width = 25%> <br>
 <h4>Recording</h4>
-<video width="50%" controls>
-<source src="./screenshots/nm-app.mp4" type="video/mp4">
- </video>
+
 
 </center>
 </div>
