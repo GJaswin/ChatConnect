@@ -16,4 +16,57 @@
 
 5. You can find the .apk in app/build/outputs/apk/debug/app-debug.apk
 
+## Project Report
+
+ ChatConnect is a chat application built for Android using Kotlin and Jetpack Compose, offering a seamless and intuitive user experience. Powered by Firebase Firestore for real-time database management and Firebase Authentication for secure user access, the app enables users to engage in fast, reliable, and secure communication. ChatConnect showcases the capabilities of Jetpack Compose in creating visually appealing and efficient layouts, while Firebase integration ensures scalability and real-time synchronization. 
+
+### 1. Creating a Project in Android Studio
+- Open Android Studio
+- Go to File > New > New Project > Empty Activity to create a new project.
+### 2. Building the project
+
+The app was built by following the instructions from the SmartInternz Project Dashboard. 
+
+### 3. Emulation
+- First, create a virtual device in Android Studio by going to Device Manager > '+'.
+- Choose a standard mobile device (Medium Phone API 35 was used here).
+- Click on the Run button to run the app on the emulator in debug mode.
+
+<div>
+<center>
+<img src="./screenshots/image.png" width = 80%> <br>
+<i>Emulation</i>
+</center>
+</div>
+
+### 4. Building the APK
+- To run the finished app on your own device, we need to build an APK file.
+- Go to Build > Build App Bundle(s) / APK(s) > Build APK(s)
+- This will build the app in debug mode. Wait for the app to finish building.
+- To build the app in release mode, go to Build > Select Build Variant and select "Release"
+- This will require you to sign the APK before running Build. Go to Build > Generate Signed APK / Bundle and follow the instructions to sign the APK.
+
+<div>
+<center>
+<img src="./screenshots/build.png" width = 80%> <br>
+<i>Building the App</i>
+</center>
+</div>
+
+### 5. Running the App on Local Hardware
+
+Just install the .apk file and open it.
+<div>
+<center>
+<img src="./screenshots/1.jpg" width = 25%> 
+<img src="./screenshots/2.jpg" width = 25%> <br>
+<img src="./screenshots/3.jpg" width = 25%> 
+<img src="./screenshots/4.jpg" width = 25%> <br>
+<h4>Recording</h4>
+<video width="50%" controls>
+<source src="./screenshots/nm-app.mp4" type="video/mp4">
+ </video>
+
+</center>
+</div>
 
